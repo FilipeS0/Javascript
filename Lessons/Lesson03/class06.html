@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events DOM</title>
+    <style>
+        div#area {
+            font: normal 1.5em Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="toclick()" onmouseenter="enter()" onmouseout="quiting()">
+        interact...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', toclick)
+        a.addEventListener('mouseenter', enter)
+        a.addEventListener('mouseout', quiting)
+
+        function toclick() {
+            a.innerText = 'Clicked!'
+            a.style.background = 'red'
+        }
+
+        function enter() {
+            a.innerText = 'Entered!'
+        }
+
+        function quiting() {
+            a.innerText = 'Quited!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
