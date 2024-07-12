@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try of lesson07</title>
+</head>
+<body>
+    <h1>Summing numbers</h1>
+    
+    <input type="number" name="n1" id="n1">
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="toSum" onclick="toSum()">
+
+    <div id="s">
+        result
+    </div>
+
+    <script>
+        function toSum() {
+            var st1 = window.document.getElementById('n1')
+            var st2 = window.document.querySelector('input#n2')
+            var sum = window.document.getElementById('s')
+
+            var nu1 = Number(st1.value)
+            var nu2 = Number(st2.value)
+            var sm2 = nu1 + nu2
+            s.innerHTML = `The sum between ${nu1} and ${nu2} is equals ${sm2}`
+        }
+
+    </script>
+</body>
+</html>
