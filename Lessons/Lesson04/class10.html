@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Fine system</h1>
+    Car Speed:<input type="number" name="txtspe" id="txtspe"> Km/h
+    <input type="button" value="Check" id="butt">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        var txts = window.document.getElementById('txtspe')
+        var res = window.document.querySelector('div#res')
+        var but = window.document.getElementById('butt')
+        
+        but.addEventListener('click', calculate)
+        
+        function calculate() {
+            var spe = Number(txts.value)
+            res.innerHTML = `<p>Your actual speed is <strong>${spe}Km/h</strong></p>`
+
+            if (spe > 60) {
+                res.innerHTML += `<p> You are <strong>FINED</strong> for ultrapass the speed limit! </p>`
+            }
+
+            res.innerHTML += `<p>Always drive with security belt!</p>`
+        }
+
+    </script>
+</body>
+</html
