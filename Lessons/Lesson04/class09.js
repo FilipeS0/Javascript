@@ -1,4 +1,4 @@
-var country = 'Brazil'
+var country = 'Portugal'
 console.log(`Living in ${country}`)
 
 if (country == 'Brazil') {

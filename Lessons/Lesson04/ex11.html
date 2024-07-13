@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra test</title>
+</head>
+<body>
+    <h1>Are you foreign or native?</h1>
+    <p>Where are you from?</p>
+    
+    <input type="text" name="txtc" id="txtc">
+    <input type="button" value="Check" id="sub">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        var check = window.document.querySelector('input#sub')
+        var res = window.document.querySelector('div#res')
+        check.addEventListener('click', country)
+
+        function country() {
+            var pe = window.document.querySelector('input#txtc').value
+
+            if (pe !== 'Brazil') {
+                res.innerHTML = `<p>You are a Foreign</p>`
+            } else {
+                res.innerHTML = `<p>You are a Brazilian</p>`
+            }
+        }
+    </script>
+</body>
+</html>
