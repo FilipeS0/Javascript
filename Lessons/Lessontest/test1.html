@@ -6,32 +6,46 @@
     <title>Hour of the day</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <main id="bg">
-        <h1>Hour of the day</h1>
-            <section>
-                <p class="clock"></p>
-                <div id="center"></div>
-            </section>
-        <p><a href="https://github.com/filipes0">GitHub</a></p>
-    </main>
+    <body>
+        <main id="bg">
+            <h1>Hour of the day</h1>
+                <section>
+                    <p class="clock"></p>
+                    <div id="center"></div>
+                </section>
+            <p><a href="https://github.com/filipes0">GitHub</a></p>
+        </main>
 
-    <script>
-        var now = new Date()
-        var hour = now.getHours()
-        var mainbg = document.querySelector('main#bg')
-        var showhour = document.querySelector('p#clock')
+        <script>
+            function changebg() {
+                var now = new Date();
+                var hour = now.getHours();
+                var mainbg = document.querySelector('main#bg');
+                var showhour = document.querySelector('p.clock');
+                var cent = document.querySelector('div#center');
 
-        showhour.innerHTML = `<p>Its ${hour} o'clock</p>`
-        if (hour > 0 && hour < 7) {
-            mainbg.innerHTML = 'yellow'
-        } else if (hour >= 7 && hour < 12) {
-            mainbg.innerHTML = 'blue'
-        } else if (hour >= 12 && hour < 18) {
-            mainbg.innerHTML = 'orange'
-        } else {
-            mainbg.innerHTML = 'blue'
-        }
-    </script>
-</body>
+                showhour.innerHTML = `<p>Its ${hour} o'clock</p>`;
+
+                if (hour >= 0 && hour < 6) {
+                    mainbg.style.backgroundColor = 'brown';
+                    mainbg.style.color = 'black';
+                    cent.style.backgroundColor = 'brown';
+                } else if (hour >= 6 && hour < 12) {
+                    mainbg.style.backgroundColor = 'blue';
+                    mainbg.style.color = 'black';
+                    cent.style.backgroundColor = 'blue';
+                } else if (hour >= 12 && hour < 18) {
+                    mainbg.style.backgroundColor = 'orange';
+                    mainbg.style.color = 'black';
+                    cent.style.backgroundColor = 'orange';
+                } else {
+                    mainbg.style.backgroundColor = 'grey';
+                    mainbg.style.color = 'black';
+                    cent.style.backgroundColor = 'grey';
+                }
+            }
+        
+            changebg();
+        </script>
+    </body>
 </html>
