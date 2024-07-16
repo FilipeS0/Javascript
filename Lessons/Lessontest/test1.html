@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hour of the day</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main id="bg">
         <h1>Hour of the day</h1>
-        <section>
-            <div id="clock"></div>
-
-        </section>
+            <section>
+                <p class="clock">aaaa</p>
+                <div id="center"></div>
+            </section>
         <p><a href="https://github.com/filipes0">GitHub</a></p>
     </main>
 
     <script>
-        
+        var now = new Date()
+        var hour = now.getHours()
+        var mainbg = document.querySelector(main#bg)
+
+        if (hour > 0 && hour < 7) {
+            mainbg.innerHTML = 'yellow'
+        } else if (hour >= 7 && hour < 12) {
+            mainbg.innerHTML = 'blue'
+        } else if (hour >= 12 && hour < 18) {
+            mainbg.innerHTML = 'orange'
+        } else {
+            mainbg.innerHTML = 'darkblue'
+        }
     </script>
 </body>
 </html>
