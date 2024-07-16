@@ -11,7 +11,9 @@
             <h1>Hour of the day</h1>
                 <section>
                     <p class="clock"></p>
-                    <div id="center"></div>
+                    <div id="center">
+                        <img src="" alt="Time-based image" id="timeImage">
+                    </div>
                 </section>
             <p><a href="https://github.com/filipes0">GitHub</a></p>
         </main>
@@ -22,26 +24,26 @@
                 var hour = now.getHours();
                 var mainbg = document.querySelector('main#bg');
                 var showhour = document.querySelector('p.clock');
-                var cent = document.querySelector('div#center');
+                var timeImg = document.querySelector('img#timeImage');
 
                 showhour.innerHTML = `<p>Its ${hour} o'clock</p>`;
 
                 if (hour >= 0 && hour < 6) {
                     mainbg.style.backgroundColor = 'brown';
                     mainbg.style.color = 'black';
-                    cent.style.backgroundColor = 'brown';
+                    timeImg.src = 'images/dawn.jpg';
                 } else if (hour >= 6 && hour < 12) {
                     mainbg.style.backgroundColor = 'blue';
                     mainbg.style.color = 'black';
-                    cent.style.backgroundColor = 'blue';
+                    timeImg.src = 'images/morning.jpg';
                 } else if (hour >= 12 && hour < 18) {
                     mainbg.style.backgroundColor = 'orange';
                     mainbg.style.color = 'black';
-                    cent.style.backgroundColor = 'orange';
+                    timeImg.src = 'images/afternoon.jpg';
                 } else {
                     mainbg.style.backgroundColor = 'grey';
                     mainbg.style.color = 'black';
-                    cent.style.backgroundColor = 'grey';
+                    timeImg.src = 'images/night.jpg';
                 }
             }
         
