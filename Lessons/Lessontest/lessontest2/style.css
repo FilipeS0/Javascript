@@ -40,16 +40,6 @@ main > p.txt {
     font-size: 1.2em;
 }
 
-div#img {
-    background-color: aqua;
-
-    margin: 15px auto;
-    border-radius: 50%;
-
-    width: 200px;
-    height: 200px;
-}
-
 footer {
     padding: 30px;
     text-align: center;
