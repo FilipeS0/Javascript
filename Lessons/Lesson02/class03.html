@@ -21,20 +21,11 @@
     <p>I've already safe from the curse!!</p>
 
     <script>
-        // var n1 = window.prompt('Type a number: ') //string
-        // var n2 = window.prompt('Type another number: ') //string
+        var n1 = Number(window.prompt("Enter a number: "));
+        var n2 = parseInt(window.prompt("Enter another number: "));
 
-        // var n1 = Number.parseInt(window.prompt('Type a number: ')) turning a string into a number
-        // var n2 = Number.parseInt(window.prompt('Type another number: ')) Turning into a number
+        var s = n1 + n2
 
-        var n1 = Number(window.prompt('Type another number: ')) // this way it can be float or intenger
-        var n2 = Number(window.prompt('Type another number: ')) // Its a easier way, here the type will be choose automatically    
-        
-        var s = n1 + n2 
-
-        // window.alert('The sum between this both number is: ' + s) /* Concatenation */
-        /* (number + number) to addition */
-        /* (string + string) to concatenation */
         window.alert(`The sum between ${n1} and ${n2} is ${s}`)
     </script>
 </body>
